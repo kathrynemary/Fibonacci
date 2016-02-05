@@ -28,6 +28,9 @@ class TestSequence < Minitest::Test
 		assert_equal 13, x
 	end
 
-end
+	def test_sum_of_6th_iteration
+		x = Fibonacci.new.fibonaccify(6)
+		assert_equal 21, x
+	end
 
-#6th iteration yeilds 21
+end

@@ -1,14 +1,17 @@
 class Fibonacci
 
 	def fibonaccify(iterations)
-		if iterations > 1 && iterations < 4
-			iterations = (iterations - 1) + iterations
-		elsif iterations > 3
-			iterations *= 2
-		else
-			iterations += 1
+		if iterations == 0
+			answer = 1
+		elsif iterations == 1
+			answer = 2
+		elsif iterations > 1
+			a = fibonaccify(iterations - 1)
+			b = fibonaccify(iterations - 2)
+			answer = a + b
 		end
-		return iterations
+
+		return answer
 	end
 
 end
